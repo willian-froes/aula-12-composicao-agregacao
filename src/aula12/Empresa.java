@@ -23,5 +23,19 @@ public class Empresa {
 	public Frota getFrota() {
 		return frota;
 	}
+
+	public void novoOnibus(int prefixo, int lotacao) {
+		frota.novoOnibus(prefixo, lotacao);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

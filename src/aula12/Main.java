@@ -28,23 +28,32 @@ public class Main {
 		System.out.println(vi1.getDestino().equals("Pelotas"));
 		System.out.println(vi1.getData().toString().equals("13/10/2018"));
 		System.out.println(vi1.getHora().toString().equals("14:00:00"));
-		/*
+		
 		// qtd assentos onibus
 		System.out.println(vi1.getTotalPassagens() == 44);
 		// qtd assentos disp
 		System.out.println(vi1.getTotalPassagensDisponiveis() == 44);
 		// comprando uma passagem a partir da viagem
 		Passagem pas1 = vi1.comprarPassagem(13); // nro assento
+		
 		// codigo viagem 1 + nro pass 1 + assento 13
 		System.out.println(pas1.getCodigo().equals("000001.000001.13"));
 		System.out.println(pas1.isDisponivel() == false);
 		System.out.println(pas1.getAssento() == 13);
+		
 		// obtendo as passagens
 		Passagem[] todasPassagens = vi1.getPassagens();
 		System.out.println(todasPassagens.length == 44); // não-nulas
 		System.out.println(todasPassagens[0].getAssento() == 1); // assento - 1 = indice
 		System.out.println(todasPassagens[0].isDisponivel() == true);
 		todasPassagens[0].comprar();
+		
+		try {
+			todasPassagens[0].comprar(); // Assento Indisponivel
+		} catch(AssentoIndisponivelException e) {
+			System.err.println(e.toString());
+		}
+		
 		System.out.println(todasPassagens[0].getAssento() == 1);
 		System.out.println(todasPassagens[0].isDisponivel() == false);
 		System.out.println(todasPassagens[0].getCodigo().equals("000001.000002.01"));
@@ -52,7 +61,7 @@ public class Main {
 		// adicionando um onibus à frota a partir da empresa
 		embaixador.novoOnibus(1205, 48);
 
-
+		/*
 		// nova rodoviária / zerar os códigos de viagem
 		Rodoviaria rod2 = new Rodoviaria("Bagé");
 		System.out.println(rod2.getLocalidade().equals("Bagé"));
